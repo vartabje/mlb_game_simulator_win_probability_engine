@@ -31,5 +31,6 @@ build/
 dist/
 *.egg-info/
 
-# Large raw datasets
-data/raw/
+# Raw datasets in data/raw/ are tracked.
+# Ignore unfinished downloads left by the collection notebook.
+*.partial
