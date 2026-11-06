@@ -60,7 +60,7 @@ The sources are kept in separate files. To combine them, match on MLB player ID 
 
 ## Limitations
 
-The statistics are full-season totals. A 2024 row includes every game from 2024, so it shouldn't be used to predict a 2024 game.
+The statistics are full-season totals. A 2024 row includes every game from 2024.
 
 Handedness tells you whether a player bats left, right or both. It doesn't show how players perform against left- or right-handed opponents. It also comes from MLB's current player profiles, not from each past season.
 
