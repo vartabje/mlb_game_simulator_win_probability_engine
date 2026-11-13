@@ -63,16 +63,19 @@ The raw API responses behind these tables are cached outside the repository, in 
 
 ## Getting started
 
-1. Create and activate a virtual environment, then install the pinned packages:
+1. Create a virtual environment with Python 3.14, install the pinned packages with that environment's Python, and register it as a Jupyter kernel:
 
    ```bash
    python -m venv .venv
-   .venv\Scripts\activate        # Windows
-   source .venv/bin/activate     # macOS or Linux
-   pip install -r requirements.txt
+   # Windows
+   .venv\Scripts\python -m pip install -r requirements.txt
+   .venv\Scripts\python -m ipykernel install --user --name mlb-game-simulator --display-name "Python (mlb-game-simulator)"
+   # macOS or Linux
+   .venv/bin/python -m pip install -r requirements.txt
+   .venv/bin/python -m ipykernel install --user --name mlb-game-simulator --display-name "Python (mlb-game-simulator)"
    ```
 
-   The saved notebook run used Python 3.14. `requirements.txt` doesn't include a notebook editor, so open the notebooks in JupyterLab, VS Code or another editor you already use.
+   `requirements.txt` covers all three notebooks but doesn't include a notebook editor, so open the notebooks in JupyterLab, VS Code or another editor you already use. In the editor, choose the kernel **Python (mlb-game-simulator)**, or in VS Code the `.venv` interpreter. The generic "Python 3" kernel can start a different Python that lacks these packages.
 
 2. Open `notebooks/savant_scrape_updated.ipynb` and run all cells. The season files in `data/raw/` are checked and reused instead of downloaded again. The game-level section rebuilds its tables from the response cache and compares them with the saved CSVs. On a machine without that cache, the game-level section downloads everything again, which takes many hours.
 
@@ -82,7 +85,7 @@ The raw API responses behind these tables are cached outside the repository, in 
 
 ## Running the simulator
 
-Open `notebooks/game_simulator.ipynb` and run all cells from a fresh kernel. It reads only the saved CSVs in `data/games/` and `data/raw/`, so the collection notebooks don't need to be rerun first. A full run takes about 20-25 minutes and needs numpy, pandas, scipy and matplotlib. The saved run used Python 3.14.0 with numpy 2.4.2, pandas 3.0.1, scipy 1.17.1 and matplotlib 3.10.8.
+Open `notebooks/game_simulator.ipynb` and run all cells from a fresh kernel. It reads only the saved CSVs in `data/games/` and `data/raw/`, so the collection notebooks don't need to be rerun first. A full run takes about 20-25 minutes and needs numpy, pandas, scipy and matplotlib. The saved run used Python 3.14.0 with numpy 2.4.2, pandas 3.0.1, scipy 1.17.1 and matplotlib 3.10.8. With the versions in `requirements.txt`, the notebook's correctness tests pass and a sample of 2026 games reproduces the saved predictions exactly. A full rerun with them hasn't been done.
 
 The notebook:
 
