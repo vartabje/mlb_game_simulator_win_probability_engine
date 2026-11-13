@@ -33,3 +33,4 @@ dist/
 
 # Large raw datasets
 data/raw/
+data_files/game_score_raw_json.jsonl
