@@ -31,6 +31,9 @@ build/
 dist/
 *.egg-info/
 
+# Large raw datasets
+data/raw/
+data_files/game_score_raw_json.jsonl
 # Raw datasets in data/raw/ are tracked.
 # Ignore unfinished downloads left by the collection notebook.
 *.partial
