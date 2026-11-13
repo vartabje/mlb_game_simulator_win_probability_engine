@@ -19,12 +19,7 @@ Data collection is done. Two notebooks download the data, check it and save it a
 
 The files from the saved run are included, so you don't need to download anything to start working with the data.
 
-The simulator itself is still planned. The [evaluation plan](project_deliverables/evaluation_plan_mini_deliverable_team_23.docx) and the implementation plan ([Word](project_deliverables/MLB_Game_Simulator_Implementation_Plan.docx), [PDF](project_deliverables/MLB_Game_Simulator_Implementation_Plan.pdf)) describe the intended approach:
-
-- Simulate a game inning by inning about 1,000 times and turn the results into each team's win percentage.
-- Compare those percentages with sportsbook odds on games held out from training.
-
-No model or simulator has been built yet.
+A first version of the simulator is built in `notebooks/game_simulator.ipynb`, following the implementation plan ([Word](project_deliverables/MLB_Game_Simulator_Implementation_Plan.docx), [PDF](project_deliverables/MLB_Game_Simulator_Implementation_Plan.pdf)). It simulates each game one plate appearance at a time about 1,000 times and turns the share of simulated wins into each team's win probability. It's developed on 2022-2025 and tested as a retrospective backtest on the completed 2026 season, against actual results. The earlier [evaluation plan](project_deliverables/evaluation_plan_mini_deliverable_team_23.docx) proposed comparing with sportsbook odds; that comparison isn't part of this run. See [Running the simulator](#running-the-simulator).
 
 ## What's in the repository
 
@@ -33,8 +28,10 @@ notebooks/
   savant_scrape.ipynb            first exploration of data sources (2023 only, saves nothing)
   savant_scrape_updated.ipynb    collects and checks the season and game-level data
   weather_scrape.ipynb           collects game conditions (weather, start times, umpires)
+  game_simulator.ipynb           builds the simulator, tunes it on 2022-2025 and backtests 2026
 data/raw/                        41 CSV files of season statistics, one row per player
 data/games/                      48 CSV files of game-level data, keyed by game
+data/simulation/                 simulator settings, 2026 predictions, evaluation tables and figures
 project_deliverables/            course deliverables
 requirements.txt                 Python package versions
 ```
@@ -83,6 +80,35 @@ The raw API responses behind these tables are cached outside the repository, in 
 3. To download fresh copies, set `OVERWRITE = True` in the configuration cell. To add a season, add it to `SEASONS` in the same cell. Only the missing files are downloaded.
 
 4. `notebooks/weather_scrape.ipynb` builds `data/games/mlb_game_conditions.csv` from raw MLB game feeds. The saved CSV is all the other notebooks need. The raw feeds are one JSON Lines file of about 17 GB, shared through the team's Google folder rather than Git. To rebuild the CSV, put `game_score_raw_json.jsonl` in `data_files/` at the repository root, which Git ignores. Then run every cell except **Run the download**. That cell downloads the feeds again.
+
+## Running the simulator
+
+Open `notebooks/game_simulator.ipynb` and run all cells from a fresh kernel. A full run takes about 15 minutes and needs numpy, pandas, scipy and matplotlib. The saved run used Python 3.14.0 with numpy 2.4.2, pandas 3.0.1, scipy 1.17.1 and matplotlib 3.10.8.
+
+The notebook:
+
+1. Checks the game tables and builds player rates, log5 matchup probabilities, runner tables and a starter-removal model from development seasons only.
+2. Runs correctness tests of the probabilities and game rules, and a timing pilot.
+3. Chooses its settings on 2024 using 2022-2023, then checks them once on 2025 using 2022-2024.
+4. Rebuilds everything from 2022-2025, simulates every 2026 game 1,000 times, and saves the predictions with a hash before reading any 2026 result.
+5. Scores the predictions against actual 2026 results and two simple baselines.
+
+Outputs in `data/simulation/`:
+
+- `run_settings.json`: chosen settings, seeds, model coefficients, package versions and the predictions hash
+- `development_comparison.csv`, `development_games.csv`: 2024 tuning and the 2025 check
+- `predictions_2026.csv`: one row per simulated 2026 game, with fallback counts
+- `evaluation_2026.csv`, `calibration_2026.csv`, `coverage_2026.csv`, `calibration_2026.png`, `runs_2026.png`
+
+A rerun must reproduce every existing output exactly, or it stops. To replace outputs on purpose, set `OVERWRITE_RESULTS = True` in the configuration cell.
+
+The evaluation is conditional on each game's actual starting lineups and starting pitchers. Simplifications in this first version:
+
+- The nine starters bat all game.
+- After the starter leaves, each team pitches with one pooled bullpen profile. Individual relievers, their rest and the three-batter minimum aren't represented.
+- Players without 2022-2025 history get league-average rates. That is about 9.5% of 2026 lineup slots; newcomers usually hit worse than average.
+- There is no home-field advantage beyond batting last. The 2026 predictions average 50% for home teams, while home teams won 52.9%.
+- Simulated games average about 9.1 runs, against 9.0 in 2026 and 8.8-8.9 in the 2024-2025 development checks.
 
 ## Limitations
 

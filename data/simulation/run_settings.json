@@ -1,0 +1,126 @@
+{
+  "seed": 23,
+  "simulations_per_game": 1000,
+  "smoothing": "(wins + 0.5) / (simulations + 1.0)",
+  "development_seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "tuning_season": 2024,
+  "check_season": 2025,
+  "test_season": 2026,
+  "event_first_season": 2023,
+  "weight_decay": 0.6,
+  "blend_scale": 1.0,
+  "season_weights": {
+    "2022": 0.21599999999999997,
+    "2023": 0.36,
+    "2024": 0.6,
+    "2025": 1.0
+  },
+  "blend_k_batters": {
+    "K": 58.3,
+    "BB": 139.4,
+    "HBP": 302.1,
+    "1B": 278.1,
+    "2B": 5000.0,
+    "3B": 544.5,
+    "HR": 244.5,
+    "IPNH": 91.8
+  },
+  "blend_k_pitchers": {
+    "K": 94.9,
+    "BB": 276.2,
+    "HBP": 665.2,
+    "1B": 536.9,
+    "2B": 5000.0,
+    "3B": 5000.0,
+    "HR": 1280.1,
+    "IPNH": 270.3
+  },
+  "removal_coefficients": [
+    -0.648339,
+    -1.248759,
+    0.486497,
+    1.498543,
+    3.779482,
+    0.180148,
+    -0.827687,
+    1.479349,
+    -0.339574,
+    0.029802,
+    -2.094937,
+    0.846178
+  ],
+  "runner_table_cells": [
+    {
+      "own": 182,
+      "pooled": 10,
+      "rule": 0
+    },
+    {
+      "own": 21,
+      "pooled": 0,
+      "rule": 0
+    }
+  ],
+  "fixed_choices": {
+    "min_play_cell": 30,
+    "usual_length_prior_starts": 3,
+    "relief_share_prior_games": 20,
+    "max_innings_guard": 60,
+    "bootstrap_draws": 2000
+  },
+  "environment": {
+    "python": "3.14.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  },
+  "simulated_total_runs_counts": [
+    0,
+    35606,
+    38280,
+    128645,
+    110683,
+    227760,
+    172092,
+    275800,
+    189967,
+    260991,
+    166357,
+    204320,
+    123573,
+    140373,
+    80587,
+    85549,
+    47152,
+    47731,
+    24965,
+    24492,
+    12625,
+    11892,
+    5870,
+    5334,
+    2615,
+    2348,
+    1098,
+    963,
+    456,
+    375,
+    174,
+    139,
+    60,
+    55,
+    24,
+    22,
+    13,
+    5,
+    4,
+    5
+  ],
+  "predictions_sha256": "9f977e6e5cab0b5ebb6a1956e6f1359a83f1c829074a063cd41966c2d7e51c14"
+}

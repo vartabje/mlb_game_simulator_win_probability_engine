@@ -1,0 +1,14 @@
+item,count
+scheduled games,2430
+simulated,2429
+scored against a result,2429
+"cancelled, not scored",1
+"shortened (Completed Early), scored",2
+"resumed after suspension, scored",1
+"flagged by collection checks, scored",1
+games with a lineup slot lacking 2022-2025 history (league rates used),1836
+lineup slots with no 2022-2025 history in that split (league rates used),4179
+starting pitchers with no 2022-2025 pitching (league rates used),372
+starting pitchers without earlier starts (league usual length used),570
+bullpens with no eligible reliever (league fallback),0
+games with uncertain bullpen rows,1493

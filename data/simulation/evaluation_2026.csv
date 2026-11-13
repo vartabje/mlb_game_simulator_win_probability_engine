@@ -1,0 +1,40 @@
+metric,estimate,ci_low,ci_high,model,season,run,games,simulated runs per game,actual runs per game,simulated extra-inning share,actual extra-inning share,mean absolute error of run difference,Monte Carlo standard error per game (mean)
+winner_accuracy,0.542610,0.524175,0.560351,simulator,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+log_loss,0.688668,0.684104,0.692970,simulator,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+brier,0.247785,0.245538,0.249919,simulator,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+winner_accuracy,0.528613,0.510682,0.548721,home-team rate,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+log_loss,0.691511,0.689129,0.693635,home-team rate,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+brier,0.249182,0.247993,0.250243,home-team rate,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+winner_accuracy,0.546315,0.526661,0.566062,last-season records,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+log_loss,0.692642,0.684268,0.701223,last-season records,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+brier,0.249536,0.245539,0.253626,last-season records,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+log_loss_difference,-0.002843,-0.008077,0.002046,simulator minus home-team rate,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+brier_difference,-0.001397,-0.003981,0.001020,simulator minus home-team rate,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+log_loss_difference,-0.003974,-0.010868,0.002930,simulator minus last-season records,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+brier_difference,-0.001751,-0.004962,0.001501,simulator minus last-season records,2026,baseline,2429,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714
+winner_accuracy,0.539317,0.520816,0.557743,simulator,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+log_loss,0.689132,0.684727,0.693318,simulator,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+brier,0.248009,0.245837,0.250071,simulator,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+winner_accuracy,0.528613,0.510682,0.548721,home-team rate,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+log_loss,0.691511,0.689129,0.693635,home-team rate,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+brier,0.249182,0.247993,0.250243,home-team rate,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+winner_accuracy,0.546315,0.526661,0.566062,last-season records,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+log_loss,0.692642,0.684268,0.701223,last-season records,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+brier,0.249536,0.245539,0.253626,last-season records,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+log_loss_difference,-0.002379,-0.007413,0.002417,simulator minus home-team rate,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+brier_difference,-0.001173,-0.003655,0.001212,simulator minus home-team rate,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+log_loss_difference,-0.003510,-0.010552,0.003392,simulator minus last-season records,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+brier_difference,-0.001527,-0.004832,0.001780,simulator minus last-season records,2026,sensitivity: uncertain relievers included,2429,9.062276,8.962124,0.100210,0.086044,3.539035,0.015715
+winner_accuracy,0.542233,0.523896,0.560020,simulator,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+log_loss,0.688767,0.684250,0.693075,simulator,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+brier,0.247834,0.245611,0.249975,simulator,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+winner_accuracy,0.528636,0.510645,0.548657,home-team rate,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+log_loss,0.691508,0.689136,0.693639,home-team rate,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+brier,0.249181,0.247996,0.250245,home-team rate,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+winner_accuracy,0.545941,0.526336,0.565715,last-season records,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+log_loss,0.692780,0.684391,0.701420,last-season records,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+brier,0.249604,0.245613,0.253714,last-season records,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+log_loss_difference,-0.002741,-0.008012,0.002222,simulator minus home-team rate,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+brier_difference,-0.001347,-0.003933,0.001094,simulator minus home-team rate,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+log_loss_difference,-0.004013,-0.010913,0.002893,simulator minus last-season records,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
+brier_difference,-0.001770,-0.004994,0.001473,simulator minus last-season records,2026,"baseline, shortened games excluded",2427,9.054005,8.959209,0.100188,0.086115,3.535084,0.015714
