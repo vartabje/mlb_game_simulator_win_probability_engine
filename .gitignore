@@ -33,11 +33,7 @@ dist/
 
 # Large raw datasets
 data/raw/
-<<<<<<< HEAD
-data_files/game_score_raw_json.jsonl
-=======
 data_files/game_score_raw_json.jsonl
 # Raw datasets in data/raw/ are tracked.
 # Ignore unfinished downloads left by the collection notebook.
 *.partial
->>>>>>> origin/main
