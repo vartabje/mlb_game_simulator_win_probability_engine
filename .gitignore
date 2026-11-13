@@ -31,9 +31,11 @@ build/
 dist/
 *.egg-info/
 
-# Large raw datasets
-data/raw/
-data_files/game_score_raw_json.jsonl
+# Raw MLB game feeds from notebooks/weather_scrape.ipynb (about 17 GB), shared through the
+# team's Google folder instead of Git. Also covers its failed-games log and any archive copy.
+data_files/
+game_score_raw_json*
+
 # Raw datasets in data/raw/ are tracked.
 # Ignore unfinished downloads left by the collection notebook.
 *.partial

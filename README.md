@@ -11,10 +11,11 @@ This is Team 23's capstone project for the University of Michigan Master of Appl
 
 ## Project status
 
-Data collection is done. One notebook downloads two kinds of data, checks them and saves them as CSV files:
+Data collection is done. Two notebooks download the data, check it and save it as CSV files:
 
 - **Season statistics** for MLB batters and pitchers, 2022 through 2026.
 - **Game-level data** for every regular-season game from 2022 through 2026: schedules, final scores, starting lineups and pitchers, and bullpens. For 2022 through 2025 it also includes every plate appearance, runner movement and Statcast pitch. Those four seasons are for building the model. 2026 has no play-by-play data, so it can be held out for testing.
+- **Game conditions** for every game from 2022 through 2026: temperature, sky or roof condition, wind, start times, attendance and umpires, from `notebooks/weather_scrape.ipynb`.
 
 The files from the saved run are included, so you don't need to download anything to start working with the data.
 
@@ -30,9 +31,10 @@ No model or simulator has been built yet.
 ```text
 notebooks/
   savant_scrape.ipynb            first exploration of data sources (2023 only, saves nothing)
-  savant_scrape_updated.ipynb    collects and checks the data used now
+  savant_scrape_updated.ipynb    collects and checks the season and game-level data
+  weather_scrape.ipynb           collects game conditions (weather, start times, umpires)
 data/raw/                        41 CSV files of season statistics, one row per player
-data/games/                      47 CSV files of game-level data, keyed by game
+data/games/                      48 CSV files of game-level data, keyed by game
 project_deliverables/            course deliverables
 requirements.txt                 Python package versions
 ```
@@ -53,6 +55,7 @@ Every table shares `game_pk`, MLB's game ID. Player columns such as `batter_id`,
 - `lineups.csv`, `starting_pitchers.csv`, `bullpen_membership.csv`: who was available before each game
 - `plate_appearances_<season>.csv`, `runner_movements_<season>.csv`, `between_pitch_events.csv`, `pitcher_appearances.csv`: play-by-play and pitcher usage, 2022–2025
 - `savant_pitches/savant_pitches_<year>-<month>.csv`: Statcast pitches, 2022–2025
+- `mlb_game_conditions.csv`: one row per game of every type, including spring training and the postseason, from `weather_scrape.ipynb`. MLB records these conditions at game time, so they are observations rather than forecasts. Indoor games show `Roof Closed` or `Dome` as the condition.
 
 The raw API responses behind these tables are cached outside the repository, in `~/.cache/mlb_game_simulator`. You can change that location with the `MLB_GAME_CACHE_DIR` environment variable.
 
@@ -60,7 +63,7 @@ The raw API responses behind these tables are cached outside the repository, in 
 
 - [Baseball Savant](https://baseballsavant.mlb.com): season statistics, expected statistics, percentile rankings and Statcast pitches
 - [FanGraphs](https://www.fangraphs.com): season batting and pitching leaderboards
-- [MLB Stats API](https://statsapi.mlb.com): handedness, schedules, game feeds, box scores, rosters and transactions
+- [MLB Stats API](https://statsapi.mlb.com): handedness, schedules, game feeds, box scores, rosters, transactions and game conditions
 
 ## Getting started
 
@@ -78,6 +81,8 @@ The raw API responses behind these tables are cached outside the repository, in 
 2. Open `notebooks/savant_scrape_updated.ipynb` and run all cells. The season files in `data/raw/` are checked and reused instead of downloaded again. The game-level section rebuilds its tables from the response cache and compares them with the saved CSVs. On a machine without that cache, the game-level section downloads everything again, which takes many hours.
 
 3. To download fresh copies, set `OVERWRITE = True` in the configuration cell. To add a season, add it to `SEASONS` in the same cell. Only the missing files are downloaded.
+
+4. `notebooks/weather_scrape.ipynb` builds `data/games/mlb_game_conditions.csv` from raw MLB game feeds. The saved CSV is all the other notebooks need. The raw feeds are one JSON Lines file of about 17 GB, shared through the team's Google folder rather than Git. To rebuild the CSV, put `game_score_raw_json.jsonl` in `data_files/` at the repository root, which Git ignores. Then run every cell except **Run the download**. That cell downloads the feeds again.
 
 ## Limitations
 
