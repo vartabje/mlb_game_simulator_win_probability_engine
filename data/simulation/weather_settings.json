@@ -1,0 +1,82 @@
+{
+  "features": [
+    "temperature_dev",
+    "wind_out_dev"
+  ],
+  "indoor_conditions": [
+    "Dome",
+    "Roof Closed"
+  ],
+  "wind_sign": {
+    "Out To LF": 1,
+    "Out To CF": 1,
+    "Out To RF": 1,
+    "In From LF": -1,
+    "In From CF": -1,
+    "In From RF": -1
+  },
+  "min_venue_outdoor_games": 30,
+  "coefficient_seasons": [
+    2023,
+    2024,
+    2025
+  ],
+  "venue_average_seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "adjusted_plate_appearances": 452102,
+  "coefficients": {
+    "temperature_dev": {
+      "K": -0.009484,
+      "BB": -0.032756,
+      "HBP": 0.027945,
+      "1B": 0.005215,
+      "2B": 0.020632,
+      "3B": -0.011884,
+      "HR": 0.099436,
+      "IPNH": 0.0
+    },
+    "wind_out_dev": {
+      "K": -0.007789,
+      "BB": -0.004705,
+      "HBP": 0.00148,
+      "1B": 0.002873,
+      "2B": 6.5e-05,
+      "3B": -0.044071,
+      "HR": 0.071147,
+      "IPNH": 0.0
+    }
+  },
+  "standard_errors": {
+    "temperature_dev": {
+      "K": 0.003854,
+      "BB": 0.005605,
+      "HBP": 0.014176,
+      "1B": 0.004529,
+      "2B": 0.007495,
+      "3B": 0.024086,
+      "HR": 0.008999,
+      "IPNH": 0.0
+    },
+    "wind_out_dev": {
+      "K": 0.006161,
+      "BB": 0.009015,
+      "HBP": 0.022482,
+      "1B": 0.007236,
+      "2B": 0.011923,
+      "3B": 0.038705,
+      "HR": 0.014059,
+      "IPNH": 0.0
+    }
+  },
+  "seeds": [
+    23,
+    24
+  ],
+  "simulations_per_game": 1000,
+  "development_rule_met": true,
+  "predictions_sha256": "90d7d792b1bb098eef69568cc08816b10a159a11196468a0128ea7fd2898e300"
+}

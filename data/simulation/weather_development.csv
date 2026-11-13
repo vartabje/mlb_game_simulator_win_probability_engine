@@ -1,0 +1,77 @@
+metric,estimate,ci_low,ci_high,held_out_season,fitted_on,subset,plate_appearances,kind,outcome
+log_loss_baseline,1.470360,1.466152,1.474788,2024,2023-2023,all plate appearances,182449.000000,plate-appearance log loss,
+log_loss_weather,1.470222,1.465956,1.474648,2024,2023-2023,all plate appearances,182449.000000,plate-appearance log loss,
+log_loss_difference,-0.000137,-0.000242,-0.000029,2024,2023-2023,all plate appearances,182449.000000,plate-appearance log loss,
+log_loss_baseline,1.468584,1.463955,1.473349,2024,2023-2023,weather-adjusted plate appearances,145914.000000,plate-appearance log loss,
+log_loss_weather,1.468412,1.463835,1.473240,2024,2023-2023,weather-adjusted plate appearances,145914.000000,plate-appearance log loss,
+log_loss_difference,-0.000172,-0.000312,-0.000031,2024,2023-2023,weather-adjusted plate appearances,145914.000000,plate-appearance log loss,
+log_loss_baseline,1.469406,1.465181,1.473608,2025,2023-2024,all plate appearances,182926.000000,plate-appearance log loss,
+log_loss_weather,1.469208,1.464974,1.473444,2025,2023-2024,all plate appearances,182926.000000,plate-appearance log loss,
+log_loss_difference,-0.000197,-0.000326,-0.000077,2025,2023-2024,all plate appearances,182926.000000,plate-appearance log loss,
+log_loss_baseline,1.470585,1.465612,1.475444,2025,2023-2024,weather-adjusted plate appearances,141288.000000,plate-appearance log loss,
+log_loss_weather,1.470329,1.465405,1.475177,2025,2023-2024,weather-adjusted plate appearances,141288.000000,plate-appearance log loss,
+log_loss_difference,-0.000256,-0.000413,-0.000101,2025,2023-2024,weather-adjusted plate appearances,141288.000000,plate-appearance log loss,
+temperature_dev: coefficient,-0.014861,,,2024,,,,coefficient,K
+temperature_dev: standard error,0.006938,,,2024,,,,coefficient,K
+wind_out_dev: coefficient,-0.028612,,,2024,,,,coefficient,K
+wind_out_dev: standard error,0.011045,,,2024,,,,coefficient,K
+temperature_dev: coefficient,-0.024891,,,2024,,,,coefficient,BB
+temperature_dev: standard error,0.010167,,,2024,,,,coefficient,BB
+wind_out_dev: coefficient,0.003964,,,2024,,,,coefficient,BB
+wind_out_dev: standard error,0.016232,,,2024,,,,coefficient,BB
+temperature_dev: coefficient,0.078737,,,2024,,,,coefficient,HBP
+temperature_dev: standard error,0.025741,,,2024,,,,coefficient,HBP
+wind_out_dev: coefficient,0.037016,,,2024,,,,coefficient,HBP
+wind_out_dev: standard error,0.040229,,,2024,,,,coefficient,HBP
+temperature_dev: coefficient,0.007860,,,2024,,,,coefficient,1B
+temperature_dev: standard error,0.008132,,,2024,,,,coefficient,1B
+wind_out_dev: coefficient,0.019287,,,2024,,,,coefficient,1B
+wind_out_dev: standard error,0.012944,,,2024,,,,coefficient,1B
+temperature_dev: coefficient,0.008337,,,2024,,,,coefficient,2B
+temperature_dev: standard error,0.013441,,,2024,,,,coefficient,2B
+wind_out_dev: coefficient,-0.020354,,,2024,,,,coefficient,2B
+wind_out_dev: standard error,0.021332,,,2024,,,,coefficient,2B
+temperature_dev: coefficient,0.052613,,,2024,,,,coefficient,3B
+temperature_dev: standard error,0.045765,,,2024,,,,coefficient,3B
+wind_out_dev: coefficient,-0.134865,,,2024,,,,coefficient,3B
+wind_out_dev: standard error,0.071306,,,2024,,,,coefficient,3B
+temperature_dev: coefficient,0.090085,,,2024,,,,coefficient,HR
+temperature_dev: standard error,0.016547,,,2024,,,,coefficient,HR
+wind_out_dev: coefficient,0.060777,,,2024,,,,coefficient,HR
+wind_out_dev: standard error,0.025878,,,2024,,,,coefficient,HR
+temperature_dev: coefficient,0.000000,,,2024,,,,coefficient,IPNH
+temperature_dev: standard error,0.000000,,,2024,,,,coefficient,IPNH
+wind_out_dev: coefficient,0.000000,,,2024,,,,coefficient,IPNH
+wind_out_dev: standard error,0.000000,,,2024,,,,coefficient,IPNH
+temperature_dev: coefficient,-0.008598,,,2025,,,,coefficient,K
+temperature_dev: standard error,0.004813,,,2025,,,,coefficient,K
+wind_out_dev: coefficient,-0.017407,,,2025,,,,coefficient,K
+wind_out_dev: standard error,0.007735,,,2025,,,,coefficient,K
+temperature_dev: coefficient,-0.029892,,,2025,,,,coefficient,BB
+temperature_dev: standard error,0.006986,,,2025,,,,coefficient,BB
+wind_out_dev: coefficient,-0.004851,,,2025,,,,coefficient,BB
+wind_out_dev: standard error,0.011295,,,2025,,,,coefficient,BB
+temperature_dev: coefficient,0.042650,,,2025,,,,coefficient,HBP
+temperature_dev: standard error,0.017643,,,2025,,,,coefficient,HBP
+wind_out_dev: coefficient,0.006410,,,2025,,,,coefficient,HBP
+wind_out_dev: standard error,0.028019,,,2025,,,,coefficient,HBP
+temperature_dev: coefficient,0.008604,,,2025,,,,coefficient,1B
+temperature_dev: standard error,0.005644,,,2025,,,,coefficient,1B
+wind_out_dev: coefficient,0.008662,,,2025,,,,coefficient,1B
+wind_out_dev: standard error,0.009070,,,2025,,,,coefficient,1B
+temperature_dev: coefficient,0.023386,,,2025,,,,coefficient,2B
+temperature_dev: standard error,0.009323,,,2025,,,,coefficient,2B
+wind_out_dev: coefficient,-0.003187,,,2025,,,,coefficient,2B
+wind_out_dev: standard error,0.014908,,,2025,,,,coefficient,2B
+temperature_dev: coefficient,0.009695,,,2025,,,,coefficient,3B
+temperature_dev: standard error,0.030565,,,2025,,,,coefficient,3B
+wind_out_dev: coefficient,-0.090127,,,2025,,,,coefficient,3B
+wind_out_dev: standard error,0.048977,,,2025,,,,coefficient,3B
+temperature_dev: coefficient,0.101714,,,2025,,,,coefficient,HR
+temperature_dev: standard error,0.011262,,,2025,,,,coefficient,HR
+wind_out_dev: coefficient,0.055375,,,2025,,,,coefficient,HR
+wind_out_dev: standard error,0.017725,,,2025,,,,coefficient,HR
+temperature_dev: coefficient,0.000000,,,2025,,,,coefficient,IPNH
+temperature_dev: standard error,0.000000,,,2025,,,,coefficient,IPNH
+wind_out_dev: coefficient,0.000000,,,2025,,,,coefficient,IPNH
+wind_out_dev: standard error,0.000000,,,2025,,,,coefficient,IPNH

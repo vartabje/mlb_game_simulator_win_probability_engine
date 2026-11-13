@@ -1,0 +1,4 @@
+# game_simulator.ipynb checks that a rerun reproduces its saved outputs byte for byte, so they
+# keep LF line endings on every checkout, including Windows with core.autocrlf=true.
+data/simulation/*.csv text eol=lf
+data/simulation/*.json text eol=lf

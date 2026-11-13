@@ -1,0 +1,41 @@
+metric,estimate,ci_low,ci_high,model,season,run,games,version,seed,subset,simulated runs per game,actual runs per game,simulated extra-inning share,actual extra-inning share,mean absolute error of run difference,Monte Carlo standard error per game (mean),total runs: mean absolute error,"total runs: correlation, simulated mean vs actual"
+winner_accuracy,0.542610,0.524175,0.560351,simulator,2026.000000,baseline,2429,baseline,23,all scored games,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714,3.589424,0.042819
+log_loss,0.688668,0.684104,0.692970,simulator,2026.000000,baseline,2429,baseline,23,all scored games,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714,3.589424,0.042819
+brier,0.247785,0.245538,0.249919,simulator,2026.000000,baseline,2429,baseline,23,all scored games,9.053867,8.962124,0.100192,0.086044,3.536963,0.015714,3.589424,0.042819
+winner_accuracy,0.536023,0.517455,0.553566,simulator,2026.000000,weather,2429,weather,23,all scored games,9.094333,8.962124,0.099940,0.086044,3.539001,0.015714,3.579234,0.094838
+log_loss,0.689295,0.684932,0.693781,simulator,2026.000000,weather,2429,weather,23,all scored games,9.094333,8.962124,0.099940,0.086044,3.539001,0.015714,3.579234,0.094838
+brier,0.248099,0.245942,0.250330,simulator,2026.000000,weather,2429,weather,23,all scored games,9.094333,8.962124,0.099940,0.086044,3.539001,0.015714,3.579234,0.094838
+log_loss_difference,0.000627,-0.000875,0.002187,weather minus baseline,,,2429,difference,23,all scored games,,,,,,,,
+brier_difference,0.000314,-0.000428,0.001079,weather minus baseline,,,2429,difference,23,all scored games,,,,,,,,
+winner_accuracy_difference,-0.006587,-0.018474,0.005316,weather minus baseline,,,2429,difference,23,all scored games,,,,,,,,
+total_runs_abs_error_difference,-0.010190,-0.027987,0.007760,weather minus baseline,,,2429,difference,23,all scored games,,,,,,,,
+winner_accuracy,0.541993,0.525308,0.560955,simulator,2026.000000,baseline,2429,baseline,24,all scored games,9.049533,8.962124,0.100202,0.086044,3.534579,0.015715,3.586665,0.054934
+log_loss,0.688014,0.683431,0.692419,simulator,2026.000000,baseline,2429,baseline,24,all scored games,9.049533,8.962124,0.100202,0.086044,3.534579,0.015715,3.586665,0.054934
+brier,0.247468,0.245209,0.249647,simulator,2026.000000,baseline,2429,baseline,24,all scored games,9.049533,8.962124,0.100202,0.086044,3.534579,0.015715,3.586665,0.054934
+winner_accuracy,0.534788,0.516422,0.552869,simulator,2026.000000,weather,2429,weather,24,all scored games,9.090520,8.962124,0.100234,0.086044,3.537493,0.015713,3.573433,0.107918
+log_loss,0.689020,0.684237,0.693642,simulator,2026.000000,weather,2429,weather,24,all scored games,9.090520,8.962124,0.100234,0.086044,3.537493,0.015713,3.573433,0.107918
+brier,0.247973,0.245606,0.250254,simulator,2026.000000,weather,2429,weather,24,all scored games,9.090520,8.962124,0.100234,0.086044,3.537493,0.015713,3.573433,0.107918
+log_loss_difference,0.001006,-0.000502,0.002487,weather minus baseline,,,2429,difference,24,all scored games,,,,,,,,
+brier_difference,0.000506,-0.000243,0.001240,weather minus baseline,,,2429,difference,24,all scored games,,,,,,,,
+winner_accuracy_difference,-0.007205,-0.019669,0.005083,weather minus baseline,,,2429,difference,24,all scored games,,,,,,,,
+total_runs_abs_error_difference,-0.013232,-0.031271,0.004680,weather minus baseline,,,2429,difference,24,all scored games,,,,,,,,
+winner_accuracy,0.549080,0.527933,0.569924,simulator,2026.000000,baseline,1956,baseline,23,weather-adjusted games,9.052057,9.000000,0.100078,0.088957,3.490297,0.015710,3.605513,0.044799
+log_loss,0.685836,0.680660,0.690802,simulator,2026.000000,baseline,1956,baseline,23,weather-adjusted games,9.052057,9.000000,0.100078,0.088957,3.490297,0.015710,3.605513,0.044799
+brier,0.246391,0.243832,0.248834,simulator,2026.000000,baseline,1956,baseline,23,weather-adjusted games,9.052057,9.000000,0.100078,0.088957,3.490297,0.015710,3.605513,0.044799
+winner_accuracy,0.540900,0.520062,0.560616,simulator,2026.000000,weather,1956,weather,23,weather-adjusted games,9.102309,9.000000,0.099765,0.088957,3.492828,0.015709,3.592859,0.105612
+log_loss,0.686615,0.681487,0.691663,simulator,2026.000000,weather,1956,weather,23,weather-adjusted games,9.102309,9.000000,0.099765,0.088957,3.492828,0.015709,3.592859,0.105612
+brier,0.246781,0.244244,0.249262,simulator,2026.000000,weather,1956,weather,23,weather-adjusted games,9.102309,9.000000,0.099765,0.088957,3.492828,0.015709,3.592859,0.105612
+log_loss_difference,0.000779,-0.001093,0.002709,weather minus baseline,,,1956,difference,23,weather-adjusted games,,,,,,,,
+brier_difference,0.000390,-0.000535,0.001335,weather minus baseline,,,1956,difference,23,weather-adjusted games,,,,,,,,
+winner_accuracy_difference,-0.008180,-0.023065,0.006606,weather minus baseline,,,1956,difference,23,weather-adjusted games,,,,,,,,
+total_runs_abs_error_difference,-0.012654,-0.035042,0.009535,weather minus baseline,,,1956,difference,23,weather-adjusted games,,,,,,,,
+winner_accuracy,0.553681,0.534451,0.573808,simulator,2026.000000,baseline,1956,baseline,24,weather-adjusted games,9.050227,9.000000,0.100182,0.088957,3.486379,0.015711,3.603501,0.053189
+log_loss,0.684501,0.679479,0.689419,simulator,2026.000000,baseline,1956,baseline,24,weather-adjusted games,9.050227,9.000000,0.100182,0.088957,3.486379,0.015711,3.603501,0.053189
+brier,0.245732,0.243257,0.248157,simulator,2026.000000,baseline,1956,baseline,24,weather-adjusted games,9.050227,9.000000,0.100182,0.088957,3.486379,0.015711,3.603501,0.053189
+winner_accuracy,0.544734,0.524628,0.564366,simulator,2026.000000,weather,1956,weather,24,weather-adjusted games,9.101125,9.000000,0.100222,0.088957,3.489997,0.015709,3.587069,0.116306
+log_loss,0.685750,0.680450,0.691017,simulator,2026.000000,weather,1956,weather,24,weather-adjusted games,9.101125,9.000000,0.100222,0.088957,3.489997,0.015709,3.587069,0.116306
+brier,0.246360,0.243746,0.248966,simulator,2026.000000,weather,1956,weather,24,weather-adjusted games,9.101125,9.000000,0.100222,0.088957,3.489997,0.015709,3.587069,0.116306
+log_loss_difference,0.001249,-0.000627,0.003111,weather minus baseline,,,1956,difference,24,weather-adjusted games,,,,,,,,
+brier_difference,0.000628,-0.000304,0.001550,weather minus baseline,,,1956,difference,24,weather-adjusted games,,,,,,,,
+winner_accuracy_difference,-0.008947,-0.024454,0.006229,weather minus baseline,,,1956,difference,24,weather-adjusted games,,,,,,,,
+total_runs_abs_error_difference,-0.016432,-0.038635,0.005831,weather minus baseline,,,1956,difference,24,weather-adjusted games,,,,,,,,
